@@ -36,8 +36,6 @@
         android:background="@color/white"
         android:elevation="16dp"
         app:itemIconTint="@color/bottom_nav_item_color"
-        app:itemTextAppearanceActive="@style/BottomNavTextAppearanceActive"
-        app:itemTextAppearanceInactive="@style/BottomNavTextAppearanceInactive"
         app:itemTextColor="@color/bottom_nav_item_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,8 +43,6 @@
         app:menu="@menu/bottom_nav">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
