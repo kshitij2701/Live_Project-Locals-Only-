@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/statusBarColor"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="18dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/statusBarColor">
+
+            <ImageView
+                android:id="@+id/cab_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/custom_ripple"
+                android:padding="12dp"
+                android:src="@drawable/back_icon_white"
+                android:stateListAnimator="@animator/pressed_state_elevation"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/cab_fragment_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fragment_name"
+                android:textColor="@color/grey_AddAddress_layout"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cab_back_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="17dp" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/alert_notification_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/custom_ripple"
+                android:padding="15dp"
+                android:visibility="visible"
+                android:src="@drawable/bell"
+                android:stateListAnimator="@animator/pressed_state_elevation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.97"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

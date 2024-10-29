@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#008DC9</color>
+    <color name="green">#5CB834</color>
+    <color name="SplashGreen">#7EC683</color>
+    <color name="statusBarColor">#595858</color>
+    <color name="HintColor">#C7C5C5</color>
+    <color name="roundedEditTextBgColor">#F8F8F8</color>
+
+    <color name="grey_AddAddress_layout">#CECECE</color>
+
+
+
+
+</resources>
