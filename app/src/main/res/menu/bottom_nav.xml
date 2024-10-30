@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/home"
+    <item
+        android:title=""
         android:id="@+id/home"
-        android:icon="@drawable/home_frame" />
-    <item android:title="@string/products"
-        android:id="@+id/products"
-        android:icon="@drawable/products_frame"/>
-    <item android:title="@string/account"
-        android:id="@+id/account"
-        android:icon="@drawable/account_frame"/>
+        android:icon="@drawable/home_tab"/>
+    <item android:title=""
+        android:id="@+id/favourite"
+        android:icon="@drawable/favourite_tab"/>
+    <item android:title=""
+        android:id="@+id/categories"
+        android:icon="@drawable/categories_tab"/>
+    <item android:title=""
+        android:id="@+id/cart"
+        android:icon="@drawable/cart_tab"/>
+    <item android:title=""
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_tab"/>
 </menu>

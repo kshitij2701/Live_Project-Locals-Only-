@@ -1,0 +1,6 @@
+<!-- res/drawable/bottom_nav_pill_indicator.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="24dp" android:height="4dp"/> <!-- Size of the pill -->
+    <solid android:color="@color/green"/> <!-- Indicator color -->
+    <corners android:radius="4dp"/> <!-- Rounded corners for pill shape -->
+</shape>

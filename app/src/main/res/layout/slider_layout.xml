@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+        app:cardUseCompatPadding="true">
+
+    <ImageView
+        android:id="@+id/slider_img"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/slider"
+        android:contentDescription="@string/image_view_description"/>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
