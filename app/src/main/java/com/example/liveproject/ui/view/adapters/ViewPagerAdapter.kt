@@ -11,10 +11,10 @@ class ViewPagerAdapter : RecyclerView.Adapter<ViewPagerAdapter.ViewHolder>() {
 
     // Define your list of images
     private val itemList = listOf(
-        R.drawable.slider, // Replace with your actual drawable resource
-        R.drawable.slider, // Replace with your actual drawable resource
-        R.drawable.slider,  // Replace with your actual drawable resource
-        R.drawable.slider  // Replace with your actual drawable resource
+        R.drawable.slider_2, // Replace with your actual drawable resource
+        R.drawable.slider_3, // Replace with your actual drawable resource
+        R.drawable.slider_2,  // Replace with your actual drawable resource
+        R.drawable.slider_3  // Replace with your actual drawable resource
     )
 
 

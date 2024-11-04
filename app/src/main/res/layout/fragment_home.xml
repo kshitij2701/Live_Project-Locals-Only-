@@ -41,7 +41,7 @@
                     app:layout_constraintTop_toTopOf="@id/homecl2"
                     app:layout_constraintVertical_bias="0.01">
 
-                    <include layout="@layout/custom_search_view"/>
+                    <include layout="@layout/custom_search_view" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -50,7 +50,7 @@
                     android:id="@+id/imgslider"
                     android:layout_width="match_parent"
                     android:layout_height="169dp"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="15dp"
                     app:layout_constraintEnd_toEndOf="@id/homecl2"
                     app:layout_constraintStart_toStartOf="@id/homecl2"
                     app:layout_constraintTop_toBottomOf="@id/search_view_layout" />
@@ -59,12 +59,110 @@
                     android:id="@+id/slider_dots"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="@id/homecl2"
                     app:layout_constraintStart_toStartOf="@id/homecl2"
                     app:layout_constraintTop_toBottomOf="@id/imgslider" />
+
+                <TextView
+                    android:id="@+id/categorytv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Categories"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/slider_dots" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categories_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@id/homecl2"
+                    app:layout_constraintStart_toStartOf="@id/homecl2"
+                    app:layout_constraintTop_toBottomOf="@id/categorytv" />
+
+                <LinearLayout
+                    android:id="@+id/NewProductsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categories_rv">
+
+                    <TextView
+                        android:id="@+id/NewProductstv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="New products"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/SeeAlltv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="See All"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/moreIcon_cl"
+                            app:layout_constraintHorizontal_bias="0.89"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/moreIcon_cl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/roundbackground_green"
+                            android:padding="6dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/search_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/search_icon"
+                                android:padding="4dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/arrow"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/newProducts_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@id/homecl2"
+                    app:layout_constraintStart_toStartOf="@id/homecl2"
+                    app:layout_constraintTop_toBottomOf="@id/NewProductsLayout" />
 
 
                 <!-- Welcome Note for User Who login -->
@@ -77,17 +175,19 @@
                     android:text="@string/hello_blank_fragment"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/slider_dots" />
+                    app:layout_constraintTop_toBottomOf="@id/newProducts_rv" />
 
                 <Button
                     android:id="@+id/logoutBtn"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_button"
                     android:layout_marginTop="30dp"
+                    android:layout_marginBottom="70dp"
+                    android:background="@drawable/rounded_button"
                     android:text="Logout"
                     android:textColor="@color/SplashGreen"
                     android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/welcometv" />

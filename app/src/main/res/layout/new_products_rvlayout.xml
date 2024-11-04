@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="1dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/newProducts_rv_image_layout"
+            android:layout_width="100dp"
+            android:layout_height="115dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rv_cl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/grey_border"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/newProducts_rv_image"
+                    android:layout_width="86dp"
+                    android:layout_height="76dp"
+                    android:src="@drawable/category1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/newProducts_rv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stiiizy 40’s multi pack"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newProducts_rv_image_layout" />
+
+        <TextView
+            android:id="@+id/newProducts_rv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$35.00"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newProducts_rv_desc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
