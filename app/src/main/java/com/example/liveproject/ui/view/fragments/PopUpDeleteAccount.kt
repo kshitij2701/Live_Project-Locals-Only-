@@ -19,6 +19,7 @@ class PopUpDeleteAccount : DialogFragment() {
         val dialog = super.onCreateDialog(savedInstanceState)
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent) // Ensures background is transparent
         dialog.window?.setDimAmount(0.8f)
+
         return dialog
     }
 
