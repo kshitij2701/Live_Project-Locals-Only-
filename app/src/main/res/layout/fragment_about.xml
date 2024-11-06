@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.fragments.About">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_about"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="About LocalsOnly"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
 
+        <ScrollView
+            android:id="@+id/about_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl2_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp">
+
+
+                <TextView
+                    android:id="@+id/about_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="41dp"
+                    android:lineHeight="24dp"
+                    android:text="Welcome to Locals Only, a proudly Black women-owned business founded in 2021. Based in Washington DC and Maryland, we’re dedicated to enhancing the holistic health and well-being of our local community. We offer a diverse range of wellness products, including high-quality, authentic, I-71 and I-81 compliant cannabis and mushroom gift options with every order.\n\nOur team is a close-knit group of reliable, trustworthy, and knowledgeable professionals committed to providing exceptional service and support.\n\nHave questions or ready to place an order? Just send us a message! Don’t forget to refer a friend—when they make their first purchase, they’ll enjoy $10 off, and you’ll receive $20 off your next order of $75 or more."
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/about_ContactInfo_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineHeight="24dp"
+                    android:text="hello@4localsonly.net\n202-713-0451 (Local)\n855-890-1214 (Toll Free)"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_tv1" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

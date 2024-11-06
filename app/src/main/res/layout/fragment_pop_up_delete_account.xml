@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ui.view.fragments.PopUpDeleteAccount">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="34dp">
+
+            <TextView
+                android:id="@+id/delete_account_layout_heading"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="You are going to delete your account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delete_account_restore_tv"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="You won't be able to restore your data"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/delete_account_layout_cancel_btn"
+                    android:layout_width="113dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/rounded_button_green"
+                    android:backgroundTint="@color/black"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/delete_account_layout_delete_btn"
+                    android:layout_width="113dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/rounded_button_green"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

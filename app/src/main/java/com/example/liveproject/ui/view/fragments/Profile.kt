@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.liveproject.R
 import com.example.liveproject.data.local.PreferencesManager
@@ -67,7 +68,8 @@ class Profile : Fragment() {
                 preferencesManager.clearUserEmail()
 
                 // Show a toast message
-                Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT)
+                    .show()
 
                 // Navigate back to login/signup screen
                 val intent = Intent(requireActivity(), SignUpActivity::class.java)
@@ -77,7 +79,8 @@ class Profile : Fragment() {
             }
 
             deleteAccountBtn.setOnClickListener {
-//                findNavController().navigate(R.id.action_account_fragment_to_myOrdersFragment)
+                val showPopUp = PopUpDeleteAccount()
+                showPopUp.show((activity as AppCompatActivity).supportFragmentManager, "showPopUp")
             }
 
         }
