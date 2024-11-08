@@ -1,5 +1,6 @@
 package com.example.liveproject.ui.view.adapters
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,10 +42,15 @@ class CategoriesAdapter(
                 Toast.LENGTH_SHORT
             )
                 .show()
-//            findNavController.navigate(R.id.action_home3_to_products2)
 
+            // Create a bundle to pass the categoryTitle
+            val bundle = Bundle().apply {
+                putString("categoryTitle", item.description)
+            }
+
+            // Navigate to CategoriesFragment with the bundle
+            findNavController.navigate(R.id.action_home2_to_categories2, bundle)
         }
-
 
     }
 

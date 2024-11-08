@@ -9,7 +9,8 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp">
 
 
         <androidx.cardview.widget.CardView

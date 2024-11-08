@@ -41,7 +41,8 @@
                     app:layout_constraintTop_toTopOf="@id/homecl2"
                     app:layout_constraintVertical_bias="0.01">
 
-                    <include layout="@layout/custom_search_view" />
+                    <include layout="@layout/custom_search_view"
+                        android:id="@+id/search_view"/>
 
                 </androidx.cardview.widget.CardView>
 

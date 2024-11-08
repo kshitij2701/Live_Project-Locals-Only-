@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_home2_to_profile2"
             app:destination="@id/profile2" />
+        <action
+            android:id="@+id/action_home2_to_searchResult"
+            app:destination="@id/searchResult" />
     </fragment>
     <fragment
         android:id="@+id/favourite2"
@@ -46,6 +49,9 @@
         android:name="com.example.liveproject.ui.view.fragments.Categories"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" >
+        <argument
+            android:name="categoryTitle"
+            app:argType="string" />
         <action
             android:id="@+id/action_categories2_to_favourite2"
             app:destination="@id/favourite2" />
@@ -142,5 +148,26 @@
         <action
             android:id="@+id/action_termsCondition_to_profile2"
             app:destination="@id/profile2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResult"
+        android:name="com.example.liveproject.ui.view.fragments.SearchResult"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResult_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_searchResult_to_filter"
+            app:destination="@id/filter" />
+    </fragment>
+    <fragment
+        android:id="@+id/filter"
+        android:name="com.example.liveproject.ui.view.fragments.Filter"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filter_to_searchResult"
+            app:destination="@id/searchResult" />
     </fragment>
 </navigation>

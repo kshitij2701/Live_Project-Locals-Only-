@@ -17,5 +17,6 @@
     <string name="search">Search</string>
     <string name="search_here">Search here</string>
     <string name="image_view_description">imageViewDesc</string>
+    <string name="all_categories">All Category</string>
 
 </resources>

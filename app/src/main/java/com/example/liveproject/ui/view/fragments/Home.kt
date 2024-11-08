@@ -34,15 +34,20 @@ class Home : Fragment() {
     private lateinit var pagerAdapter: ViewPagerAdapter
 
     private val handler = Handler(Looper.getMainLooper())
-    private var currentPage = 0
+    private var currentPage = -1
 
     private val runnable = object : Runnable {
         override fun run() {
-            // Change the page
-            if (currentPage == pagerAdapter.itemCount) {
-                currentPage = 0
+            // Increment page or reset to the first page if it's the last one
+            currentPage = if (currentPage < pagerAdapter.itemCount) {
+                currentPage + 1
+            } else {
+                -1 // Reset to the first page when reaching the end
             }
-            viewPager.setCurrentItem(currentPage++, true)
+
+            // Set the current page in ViewPager with smooth scrolling
+            viewPager.setCurrentItem(currentPage, true)
+
             // Schedule the next execution
             handler.postDelayed(this, 3000) // Change images every 3 seconds
         }
@@ -80,6 +85,10 @@ class Home : Fragment() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             requireActivity().finish() // Close the activity to prevent back navigation
+        }
+
+        binding.searchViewLayout.setOnClickListener {
+            findNavController().navigate(R.id.action_home2_to_searchResult)
         }
 
         // Setup ViewPager2 and adapter
